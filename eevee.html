@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eevee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="normalbg">
+    <div class="card">
+        <header class="header-content">
+            <div>
+              <h1>Eevee</h1>
+              <div class="typys">
+                <button class="header-btn"><a href="normal.html"><span class="type normal-type">Normal</span></a></button>
+              </div>
+            </div>
+            <div>#0133</div>
+        </header>
+        <div class="header-img normal">
+          <img src="eevee.png" alt="Eevee">
+        </div>
+
+        <div class="tabs">
+          <button class="active" onclick="switchTab('about')">About</button>
+          <button onclick="switchTab('stats')">Base Stats</button>
+          <button onclick="switchTab('evolution')">Evolution</button>
+        </div>
+
+        <div class="content">
+          <div id="about" class="section active">
+            
+            <div class="details-card">
+                <div class="category base-stats">
+                    Type
+                    <div class="btn">
+                        <a href="normal.html"><button type="button" class="button-normal btn-primary">Normal</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Strong against:
+                    <div class="btn">
+                        <a href="ghost.html"><button type="button" class="button-ghost btn-primary">Ghost</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Weak against:
+                    <div class="btn">
+                        <a href="fighting.html"><button type="button" class="button-fighting btn-primary">Fighting</button></a>
+                    </div>
+                </div>    
+                <div class="base-stats">
+                    <div class="category">Species</div>
+                    <span class="stats-val">Evolution Pokémon</span><br>
+                    <div class="category">Height</div>
+                    <span class="stats-val">0.3 m (1′00″)</span><br>
+                    <div class="category">Weight</div>
+                    <span class="stats-val">6.5 kg (14.3 lbs)</span><br>
+            </div>
+          </div>
+        </div>
+          <div id="stats" class="section">
+            <div class="base-stats">
+                <span class="category">HP</span>
+                <span class="stats-num">55</span>
+                <div class="bar">
+                 <div class="filled-bar s1" style="width: 30.56%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Attack</span>
+                <span class="stats-num">55</span>
+                <div class="bar">
+                 <div class="filled-bar s2" style="width: 30.56%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Defence</span>
+                <span class="stats-num">50</span>
+                <div class="bar">
+                <div class="filled-bar s3" style="width: 27.78%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Atk</span>
+                <span class="stats-num">45</span>
+                <div class="bar">
+                <div class="filled-bar s4" style="width: 25.00%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Def</span>
+                <span class="stats-num">65</span>
+                <div class="bar">
+                 <div class="filled-bar s5" style="width: 36.11%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Speed</span>
+                <span class="stats-num">55</span>
+                <div class="bar">
+                <div class="filled-bar s6" style="width: 30.56%;"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="base-stats total">
+                <span class="category">Total</span>
+                <span class="stats-numTotal">325</span>    
+            </div>
+        </div>
+          </div>
+          <div id="evolution" class="section">
+            <h2>Evolution</h2>
+            <p>Stage 1: Eevee</p>
+            <p>Stage 2 (Daytime): Espeon</p>
+            <p>Stage 2 (Nighttime): Umbreon</p>
+            <p>Stage 2 (Ice Rock nearby): Glaceon</p>
+            <p>Stage 2 (Moss Rock nearby): Leafeon</p>
+            <p>Stage 2 (Level up with Fairy move): Sylveon</p>
+            <p>Stage 2 (Thunder Stone): Jolteon</p>
+            <p>Stage 2 (Fire Stone): Flareon</p>
+            <p>Stage 2 (Water Stone): Vaporeon</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tabId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Remove active class from all buttons
+          document.querySelectorAll('.tabs button').forEach(button => {
+            button.classList.remove('active');
+          });
+
+          // Show the selected section
+          document.getElementById(tabId).classList.add('active');
+
+          // Highlight the active button
+          document.querySelector(`.tabs button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+        }
+      </script>
+</body>
+</html>

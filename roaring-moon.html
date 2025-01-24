@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roaring Moon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dragonbg">
+    <div class="card">
+        <header class="header-content">
+            <div>
+              <h1>Roaring Moon</h1>
+              <div class="typys">
+                <button class="header-btn"><a href="dragon.html"><span class="type dragon-type">Dragon</span></a></button>
+                <button class="header-btn"><a href="dark.html"><span class="type dark-type">Dark</span></a></button>
+              </div>
+            </div>
+            <div>#1008</div>
+        </header>
+        <div class="header-img dragon">
+          <img src="roaringmoon.png" alt="Roaring Moon">
+        </div>
+
+        <div class="tabs">
+          <button class="active" onclick="switchTab('about')">About</button>
+          <button onclick="switchTab('stats')">Base Stats</button>
+          <button onclick="switchTab('evolution')">Evolution</button>
+        </div>
+
+        <div class="content">
+          <div id="about" class="section active">
+            
+            <div class="details-card">
+                <div class="category base-stats">
+                    Type
+                    <div class="btn">
+                        <a href="dragon.html"><button type="button" class="button-dragon btn-primary">Dragon</button></a>
+                        <a href="dark.html"><button type="button" class="button-dark btn-primary">Dark</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Strong against:
+                    <div class="btn">
+                        <a href="psychic.html"><button type="button" class="button-psy btn-primary">Psychic</button></a>
+                        <a href="ghost.html"><button type="button" class="button-ghost btn-primary">Ghost</button></a>
+                        <a href="grass.html"><button type="button" class="button-grass btn-primary">Grass</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Weak against:
+                    <div class="btn">
+                        <a href="fairy.html"><button type="button" class="button-fairy btn-primary">Fairy</button></a>
+                        <a href="dragon.html"><button type="button" class="button-dragon btn-primary">Dragon</button></a>
+                        <a href="ice.html"><button type="button" class="button-ice btn-primary">Ice</button></a>
+                    </div>
+                </div>    
+                <div class="base-stats">
+                    <div class="category">Species</div>
+                    <span class="stats-val">Paradox Pokémon</span><br>
+                    <div class="category">Height</div>
+                    <span class="stats-val">2.0 m (6′07″)</span><br>
+                    <div class="category">Weight</div>
+                    <span class="stats-val">380.0 kg (837.8 lbs)</span><br>
+            </div>
+          </div>
+        </div>
+          <div id="stats" class="section">
+            <div class="base-stats">
+                <span class="category">HP</span>
+                <span class="stats-num">105</span>
+                <div class="bar">
+                 <div class="filled-bar s1" style="width: 58.33%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Attack</span>
+                <span class="stats-num">139</span>
+                <div class="bar">
+                 <div class="filled-bar s2" style="width: 77.22%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Defence</span>
+                <span class="stats-num">71</span>
+                <div class="bar">
+                <div class="filled-bar s3" style="width: 39.44%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Atk</span>
+                <span class="stats-num">55</span>
+                <div class="bar">
+                <div class="filled-bar s4" style="width: 30.56%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Def</span>
+                <span class="stats-num">101</span>
+                <div class="bar">
+                 <div class="filled-bar s5" style="width: 56.11%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Speed</span>
+                <span class="stats-num">119</span>
+                <div class="bar">
+                <div class="filled-bar s6" style="width: 66.11%;"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="base-stats total">
+                <span class="category">Total</span>
+                <span class="stats-numTotal">590</span>    
+            </div>
+        </div>
+          </div>
+          <div id="evolution" class="section">
+            <h2>Evolution</h2>
+            <p>Roaring Moon does not evolve.</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tabId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Remove active class from all buttons
+          document.querySelectorAll('.tabs button').forEach(button => {
+            button.classList.remove('active');
+          });
+
+          // Show the selected section
+          document.getElementById(tabId).classList.add('active');
+
+          // Highlight the active button
+          document.querySelector(`.tabs button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="poisonbg">
+    <div class="card">
+        <header class="header-content">
+            <div>
+              <h1>Zubat</h1>
+              <div class="typys">
+                <button class="header-btn"><a href="poison.html"><span class="type poison-type">Poison</span></a></button>
+                <button class="header-btn"><a href="flying.html"><span class="type flying-type">Flying</span></a></button>
+              </div>
+            </div>
+            <div>#0041</div>
+        </header>
+        <div class="header-img poison">
+          <img src="zubat.png" alt="Zubat">
+        </div>
+
+        <div class="tabs">
+          <button class="active" onclick="switchTab('about')">About</button>
+          <button onclick="switchTab('stats')">Base Stats</button>
+          <button onclick="switchTab('evolution')">Evolution</button>
+        </div>
+
+        <div class="content">
+          <div id="about" class="section active">
+            
+            <div class="details-card">
+                <div class="category base-stats">
+                    Type
+                    <div class="btn">
+                        <a href="poison.html"><button type="button" class="button-poison btn-primary">Poison</button></a>
+                        <a href="flying.html"><button type="button" class="button-fly btn-primary">Flying</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Strong against:
+                    <div class="btn">
+                        <a href="grass.html"><button type="button" class="button-grass btn-primary">Grass</button></a>
+                        <a href="fighting.html"><button type="button" class="button-fighting btn-primary">Fighting</button></a>
+                        <a href="bug.html"><button type="button" class="button-bug btn-primary">Bug</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Weak against:
+                    <div class="btn">
+                        <a href="electric.html"><button type="button" class="button-electric btn-primary">Electric</button></a>
+                        <a href="rock.html"><button type="button" class="button-rock btn-primary">Rock</button></a>
+                        <a href="psychic.html"><button type="button" class="button-psy btn-primary">Psychic</button></a>
+                    </div>
+                </div>    
+                <div class="base-stats">
+                    <div class="category">Species</div>
+                    <span class="stats-val">Bat Pokémon</span><br>
+                    <div class="category">Height</div>
+                    <span class="stats-val">0.8 m (2′07″)</span><br>
+                    <div class="category">Weight</div>
+                    <span class="stats-val">7.5 kg (16.5 lbs)</span><br>
+            </div>
+          </div>
+        </div>
+          <div id="stats" class="section">
+            <div class="base-stats">
+                <span class="category">HP</span>
+                <span class="stats-num">40</span>
+                <div class="bar">
+                 <div class="filled-bar s1" style="width: 22.22%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Attack</span>
+                <span class="stats-num">45</span>
+                <div class="bar">
+                 <div class="filled-bar s2" style="width: 25.00%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Defence</span>
+                <span class="stats-num">35</span>
+                <div class="bar">
+                <div class="filled-bar s3" style="width: 19.44%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Atk</span>
+                <span class="stats-num">30</span>
+                <div class="bar">
+                <div class="filled-bar s4" style="width: 16.67%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Def</span>
+                <span class="stats-num">40</span>
+                <div class="bar">
+                 <div class="filled-bar s5" style="width: 22.22%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Speed</span>
+                <span class="stats-num">55</span>
+                <div class="bar">
+                <div class="filled-bar s6" style="width: 30.56%;"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="base-stats total">
+                <span class="category">Total</span>
+                <span class="stats-numTotal">245</span>    
+            </div>
+        </div>
+          </div>
+          <div id="evolution" class="section">
+            <h2>Evolution</h2>
+            <p>Stage 1: Zubat</p>
+            <p>Stage 2: Golbat</p>
+            <p>Stage 3: Crobat</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tabId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Remove active class from all buttons
+          document.querySelectorAll('.tabs button').forEach(button => {
+            button.classList.remove('active');
+          });
+
+          // Show the selected section
+          document.getElementById(tabId).classList.add('active');
+
+          // Highlight the active button
+          document.querySelector(`.tabs button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+        }
+      </script>
+</body>
+</html>

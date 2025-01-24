@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fezandipiti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fairybg">
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>  
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>  
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>  
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
+
+    <div class="card">
+        <header class="header-content">
+            <div>
+              <h1>Fezandipiti</h1>
+              <div class="typys">
+                <button class="header-btn"><a href="poison.html"><span class="type poison-type">Poison</span></a></button>
+                <button class="header-btn"><a href="fairy.html"><span class="type fairy-type">Fairy</span></a></button>
+              </div>
+            </div>
+            <div>#1007</div>
+        </header>
+        <div class="header-img fairy">
+          <img src="fezandipiti.png" alt="Fezandipiti">
+        </div>
+
+        <div class="tabs">
+          <button class="active" onclick="switchTab('about')">About</button>
+          <button onclick="switchTab('stats')">Base Stats</button>
+          <button onclick="switchTab('evolution')">Evolution</button>
+        </div>
+
+        <div class="content">
+          <div id="about" class="section active">
+            
+            <div class="details-card">
+                <div class="category base-stats">
+                    Type
+                    <div class="btn">
+                        <a href="poison.html"><button type="button" class="button-poison btn-primary">Poison</button></a>
+                        <a href="fairy.html"><button type="button" class="button-fairy btn-primary">Fairy</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Strong against:
+                    <div class="btn">
+                        <a href="dragon.html"><button type="button" class="button-dragon btn-primary">Dragon</button></a>
+                        <a href="fighting.html"><button type="button" class="button-fighting btn-primary">Fighting</button></a>
+                        <a href="dark.html"><button type="button" class="button-dark btn-primary">Dark</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Weak against:
+                    <div class="btn">
+                        <a href="steel.html"><button type="button" class="button-steel btn-primary">Steel</button></a>
+                        <a href="ground.html"><button type="button" class="button-gnd btn-primary">Ground</button></a>
+                        <a href="psychic.html"><button type="button" class="button-psy btn-primary">Psychic</button></a>
+                    </div>
+                </div>    
+                <div class="base-stats">
+                    <div class="category">Species</div>
+                    <span class="stats-val">Ornate Pokémon</span><br>
+                    <div class="category">Height</div>
+                    <span class="stats-val">1.6 m (5′03″)</span><br>
+                    <div class="category">Weight</div>
+                    <span class="stats-val">36.4 kg (80.3 lbs)</span><br>
+            </div>
+          </div>
+        </div>
+          <div id="stats" class="section">
+            <div class="base-stats">
+                <span class="category">HP</span>
+                <span class="stats-num">85</span>
+                <div class="bar">
+                 <div class="filled-bar s1" style="width: 47.22%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Attack</span>
+                <span class="stats-num">60</span>
+                <div class="bar">
+                 <div class="filled-bar s2" style="width: 33.33%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Defence</span>
+                <span class="stats-num">90</span>
+                <div class="bar">
+                <div class="filled-bar s3" style="width: 50.00%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Atk</span>
+                <span class="stats-num">130</span>
+                <div class="bar">
+                <div class="filled-bar s4" style="width: 72.22%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Def</span>
+                <span class="stats-num">90</span>
+                <div class="bar">
+                 <div class="filled-bar s5" style="width: 50.00%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Speed</span>
+                <span class="stats-num">75</span>
+                <div class="bar">
+                <div class="filled-bar s6" style="width: 41.67%;"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="base-stats total">
+                <span class="category">Total</span>
+                <span class="stats-numTotal">530</span>    
+            </div>
+        </div>
+          </div>
+          <div id="evolution" class="section">
+            <h2>Evolution</h2>
+            <p>Fezandipiti does not evolve.</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tabId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Remove active class from all buttons
+          document.querySelectorAll('.tabs button').forEach(button => {
+            button.classList.remove('active');
+          });
+
+          // Show the selected section
+          document.getElementById(tabId).classList.add('active');
+
+          // Highlight the active button
+          document.querySelector(`.tabs button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+        }
+      </script>
+</body>
+</html>

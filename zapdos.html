@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapdos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="electricbg">
+    <div class="card">
+        <header class="header-content">
+            <div>
+              <h1>Zapdos</h1>
+              <div class="typys">
+                <button class="header-btn"><a href="electric.html"><span class="type electric-type">Electric</span></a></button>
+                <button class="header-btn"><a href="flying.html"><span class="type flying-type">Flying</span></a></button>
+              </div>
+            </div>
+            <div>#0145</div>
+        </header>
+        <div class="header-img electric">
+          <img src="zapdos.png" alt="Zapdos">
+        </div>
+
+        <div class="tabs">
+          <button class="active" onclick="switchTab('about')">About</button>
+          <button onclick="switchTab('stats')">Base Stats</button>
+          <button onclick="switchTab('evolution')">Evolution</button>
+        </div>
+
+        <div class="content">
+          <div id="about" class="section active">
+            
+            <div class="details-card">
+                <div class="category base-stats">
+                    Type
+                    <div class="btn">
+                        <a href="electric.html"><button type="button" class="button-electric btn-primary">Electric</button></a>
+                        <a href="flying.html"><button type="button" class="button-fly btn-primary">Flying</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Strong against:
+                    <div class="btn">
+                        <a href="water.html"><button type="button" class="button-water btn-primary">Water</button></a>
+                        <a href="flying.html"><button type="button" class="button-fly btn-primary">Flying</button></a>
+                    </div>
+                </div>
+                <div class="category base-stats">
+                    Weak against:
+                    <div class="btn">
+                        <a href="rock.html"><button type="button" class="button-rock btn-primary">Rock</button></a>
+                        <a href="ice.html"><button type="button" class="button-ice btn-primary">Ice</button></a>
+                    </div>
+                </div>    
+                <div class="base-stats">
+                    <div class="category">Species</div>
+                    <span class="stats-val">Electric Pokémon</span><br>
+                    <div class="category">Height</div>
+                    <span class="stats-val">1.6 m (5′03″)</span><br>
+                    <div class="category">Weight</div>
+                    <span class="stats-val">52.6 kg (116.0 lbs)</span><br>
+            </div>
+          </div>
+        </div>
+          <div id="stats" class="section">
+            <div class="base-stats">
+                <span class="category">HP</span>
+                <span class="stats-num">90</span>
+                <div class="bar">
+                 <div class="filled-bar s1" style="width: 50.00%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Attack</span>
+                <span class="stats-num">90</span>
+                <div class="bar">
+                 <div class="filled-bar s2" style="width: 50.00%;"></div>
+                </div>
+            </div>
+            <div class="base-stats">
+                <span class="category">Defence</span>
+                <span class="stats-num">85</span>
+                <div class="bar">
+                <div class="filled-bar s3" style="width: 47.22%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Atk</span>
+                <span class="stats-num">125</span>
+                <div class="bar">
+                <div class="filled-bar s4" style="width: 69.44%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Sp. Def</span>
+                <span class="stats-num">90</span>
+                <div class="bar">
+                 <div class="filled-bar s5" style="width: 50.00%;"></div>
+                </div> 
+            </div>
+            <div class="base-stats">
+                <span class="category">Speed</span>
+                <span class="stats-num">100</span>
+                <div class="bar">
+                <div class="filled-bar s6" style="width: 55.56%;"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="base-stats total">
+                <span class="category">Total</span>
+                <span class="stats-numTotal">580</span>    
+            </div>
+        </div>
+          </div>
+          <div id="evolution" class="section">
+            <h2>Evolution</h2>
+            <p>Zapdos does not evolve.</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tabId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // Remove active class from all buttons
+          document.querySelectorAll('.tabs button').forEach(button => {
+            button.classList.remove('active');
+          });
+
+          // Show the selected section
+          document.getElementById(tabId).classList.add('active');
+
+          // Highlight the active button
+          document.querySelector(`.tabs button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+        }
+      </script>
+</body>
+</html>
